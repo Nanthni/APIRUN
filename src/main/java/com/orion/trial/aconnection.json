@@ -1,0 +1,13 @@
+{
+  "connector_id": "java",
+  "name": "ssss",
+  "parameters": {
+    "srvname": "Java",
+    "projname": "Java-Project",
+    "options": "CREATE",
+    "dbhost": "RDB",
+    "dbname": "DB",
+    "defaultSchema": "TEMP",
+    "excludePathMask": "test/java,test/resources,target/classes,__MACOSX"
+  }
+}

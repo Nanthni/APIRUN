@@ -1,0 +1,79 @@
+java -jar C:/Users/IND029/Desktop/Tasks/API_RUN_nodeletion.jar
+java -jar C:\Users\IND029\Desktop\Tasks\API_RUN_withdeletion.jar
+--------------------------------------------------------------------------------------------------------------------
+pentaho data integrator
+----------------------------------
+1)hostname :	test01.orionic.com
+------------------------------------------
+2)tokenid :	mmx-NzrDHZIS3ouTkumlIMYMQ
+-------------------------------------------
+3)connection parameters:
+----------------------
+{"connector_id":"pdi","name":"connection_pdi_2","parameters":{"server":"PDI_SERVER","project":"PDI_PROJECT","dbhost":"DB_SERVER","dbname":"PDI_SOURCE_DB","defaultSchema":"TEMP"}}
+---------------------------------------------------------
+4)job parameters:
+----------------
+{"name":"job_pdi_2","tags":"gc","steps":[{"connection":"connection_pdi_2"}]}
+---------------------------------------------------------------------
+5)java location:
+----------------
+C:/Users/IND029/Desktop/zips_jars_/Transformations/addxml.ktr
+------------------------------------------------------------
+
+-----------------------------------------
+java
+-----------------------------------------
+1)hostname :	test01.orionic.com
+------------------------------------------
+2)tokenid :	mmx-NzrDHZIS3ouTkumlIMYMQ
+-------------------------------------------
+3)connection parameters:
+----------------------
+{"connector_id":"java","name":"ssss","parameters":{"srvname":"Java","projname":"Java-Project","options":"CREATE","dbhost":"RDB","dbname":"DB","defaultSchema":"TEMP","excludePathMask":"test/java,test/resources,target/classes,__MACOSX"}}
+---------------------------------------------------------
+4)job parameters:
+----------------
+{"name":"ssss_job_1","tags":"gc","steps":[{"connection":"connection_pdi_1"},{ "connection":"connection_pdi_2"},{"connection":"ssss"}]}
+---------------------------------------------------------------------
+5)java location:
+----------------
+C:\\Users\\IND029\\Desktop\\task4.java
+C:\\Users\\IND029\\Desktop\\Greeting.java
+------------------------------------------------------------
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------
+test01.orionic.com
+
+mmx-NzrDHZIS3ouTkumlIMYMQ
+
+//change name and connection accordingly
+java:
+{"connector_id":"java","name":"connection_n","parameters":{"srvname":"Java","projname":"Java-Project","options":"CREATE","dbhost":"RDB","dbname":"DB","defaultSchema":"TEMP","excludePathMask":"test/java,test/resources,target/classes,__MACOSX"}}
+pentaho:
+{"connector_id":"graphml","name":"connection_b","parameters":{"fileExtensions":"graphml"}}
+
+java:
+{"name":"connection_n_job","tags":"gc","steps":[{"connection":"connection_n"}]}
+pentaho:
+{"name":"connection_b_job","tags":"gc","steps":[{"connection":"connection_b"}]}
+
+javalocation:
+C:/Users/IND029/eclipse-workspace/Project1/src/task4.java
+pentaholocation:
+C:/Users/IND029/Desktop/zips_jars_/Transformations.zip
+
+
+---------------------
+connection parameters
+---------------------
+"{\"connector_id\":\"java\",\"name\":\"ssss\",\"parameters\":{\"srvname\":\"Java\",\"projname\":\"Java-Project\",\"options\":\"CREATE\",\"dbhost\":\"RDB\",\"dbname\":\"DB\",\"defaultSchema\":\"TEMP\",\"excludePathMask\":\"test/java,test/resources,target/classes,__MACOSX\"}}"
+---------------------
+"{\"connector_id\":\"graphml\",\"name\":\"api_pentaho\",\"parameters\":{\"fileExtensions\":\"graphml\"}}"
+---------------------
+job
+---------------------
+{"name":"ssss_job2","tags":"gc","steps":[{"connection":"ssss"}]}

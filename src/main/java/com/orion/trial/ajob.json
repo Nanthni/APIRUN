@@ -1,0 +1,9 @@
+{
+  "name": "ssss_job2",
+  "tags": "gc",
+  "steps": [
+    {
+      "connection": "ssss"
+    }
+  ]
+}
